@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+  	<style>
+ html {
+    margin: 0;
+    padding: 0;
+}
+/*body {
+    font-family: 'Handlee';
+    font-size: 13pt;
+    background-color: #efef;
+    padding: 10px;
+    margin: 0;
+}*/
+h1 {
+    font-size: 20pt;
+    color: #006400;
+    text-align: left;
+    padding: 18px 0 18px 0;
+    margin: 0 0 10px 0;
+}
+.section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+progress {
+    width: 80%;
+    height: 20px;
+    color: #006400;
+    background: #efefef;
+} 
+progress::-webkit-progress-bar {
+    background: #efefef;
+}
+progress::-webkit-progress-value {
+    background: linear-gradient(to right, green, yellow, red);
+} 
+progress::-moz-progress-bar {
+    color: #3fb6b2;
+    background: #efefef;
+}
+.submit {
+    background-color: #3fb6b2;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #43a09d;
+}
+ </style>
+    <title>Ethicool</title>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h1>Ethicool</h1>
+ 
+    	
+    		<button id="checkPage">Check CO2 Footprint</button>
+		<div class="section">
+                    <progress min="0" max="14" value="11"></progress>
+        </div>
+	<script type="text/javascript">
+		document.getElementById("checkPage").addEventListener("click", function(){
+			fetch("http://127.0.0.1:5000").then(function(response){
+				return response.text()
+			}).then(function(text){
+				console.log(text)
+			})
+		}
+
+			)
+	</script>
+  </body>
+</html>
