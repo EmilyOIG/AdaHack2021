@@ -1,14 +1,26 @@
 import requests
-import sys
-
-print(sys.version)
 
 from bs4 import BeautifulSoup
 
-URL = "https://www.bbcgoodfood.com/recipes/best-spaghetti-bolognese-recipe"
-page = requests.get(URL)
+def getIngredientsFromPage(url):
+    page = requests.get(url)
+    
+    soup = BeautifulSoup(page.content, "html.parser")
+    ingredientSection = soup.find("section", class_="recipe__ingredients")
+    ingredients = ingredientSection.find_all("li", class_="list-item")
 
-soup = BeautifulSoup(page.content, "html.parser")
+    results = []
+    for i in ingredients:
+        results.append(i.text.split(" "))
 
-# ingredients = soup.find(class_="recipe_ingredients")
-# print(ingredients.prettify())
+    #print(results)
+    return results
+
+getIngredientsFromPage("https://www.bbcgoodfood.com/recipes/slow-cooker-beef-stew")
+
+
+def containsMeat(ingredient):
+    return False
+
+def findSubstitute(meatType):
+    return None
