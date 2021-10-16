@@ -21,6 +21,8 @@
   "homepage": "https://github.com/EmilyOIG/AdaHack2021#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
+    "dataframe-js": "^1.4.4",
+    "request": "^2.88.2",
     "request-promise": "^4.2.6"
   }
 }
