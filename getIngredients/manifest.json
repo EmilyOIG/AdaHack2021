@@ -8,7 +8,7 @@
       },
   
     "browser_action": {
-     "browser_style": "true;",
+     "browser_style": true,
      "deafult_icon": "images/icon.png",
      "default_popup": "popup.html",
      "default_title": "Hello"
