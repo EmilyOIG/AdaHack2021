@@ -1,0 +1,26 @@
+{
+  "name": "adahack2021",
+  "version": "1.0.0",
+  "description": "(scrape)",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilyOIG/AdaHack2021.git"
+  },
+  "keywords": [
+    "scrape"
+  ],
+  "author": "Susanna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmilyOIG/AdaHack2021/issues"
+  },
+  "homepage": "https://github.com/EmilyOIG/AdaHack2021#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "request-promise": "^4.2.6"
+  }
+}
