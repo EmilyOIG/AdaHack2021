@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-  	<style>
- html {
+ <style>
+ html, body {
+    height: 200px;
     margin: 0;
     padding: 0;
 }
@@ -57,27 +58,48 @@ progress::-moz-progress-bar {
     background-color: #43a09d;
 }
  </style>
-    <title>Ethicool</title>
-    <script src="popup.js"></script>
+    <title>VeggieSwap</title>
+    <script src="frontend/src/App.js"></script>
   </head>
   <body>
-    <h1>Ethicool</h1>
- 
-    	
-    		<button id="checkPage">Check CO2 Footprint</button>
-		<div class="section">
-                    <progress min="0" max="14" value="11"></progress>
-        </div>
-	<script type="text/javascript">
-		document.getElementById("checkPage").addEventListener("click", function(){
-			fetch("http://127.0.0.1:5000").then(function(response){
-				return response.text()
-			}).then(function(text){
-				console.log(text)
-			})
-		}
+    <h1>VeggieSwap</h1>
 
-			)
+    <button onclick="myFunction()">Click me</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello World";
+        }
+    </script>
+ 
+    <button onclick="myFunction()">Get substitutes</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            ;
+        }
+    </script> -->
+    	 <button id="checkPage">Find Meat Substitutes for this Recipe</button>
+     <button onclick="myFunction()">Find Substitutes for this Recipe</button>
+    <p id="demo"></p>
+		 
+	<script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello World";
+        }
+		// document.getElementById("checkPage").addEventListener("click", function(){
+		// 	fetch("http://127.0.0.1:3000").then(function(response){
+		// 		return response.text()
+		// 	}).then(function(text){
+		// 		console.log(text)
+		// 	})
+		// }
+
+		// 	)
 	</script>
   </body>
 </html>
