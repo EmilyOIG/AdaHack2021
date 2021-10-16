@@ -1,3 +1,4 @@
+/*global chrome*/
 import React, {useState} from "react";
 import axios from "axios";
 
@@ -6,9 +7,19 @@ function Substitute() {
     
     
     function getSubstitute() {
-        axios.get("http://localhost:5000/",  { crossdomain: true }).then(response => {
-          setList(response.data);
+        chrome.tabs.query({
+            active: true,
+            lastFocusedWindow: true
+        }, function(tabs) {
+            // and use that tab to fill in out title and url
+            var tab = tabs[0];
+            //console.log(tab.url);
+            var requestString = "http://localhost:5000/" + "?RecipleUrl=" + tab.url;
+            axios.get(requestString,  { crossdomain: true }).then(response => {
+                setList(response.data);
+            });
         });
+        
       }
     
     return (

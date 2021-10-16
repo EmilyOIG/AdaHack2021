@@ -83,7 +83,10 @@ function getSubsForURL(url, res) {
 // });
 
 app.get("/", function(req, res) {
-    getSubsForURL("https://www.bbcgoodfood.com/recipes/beef-guinness-stew-bacon-dumplings", res)
+    let url = req.query.RecipleUrl;
+    console.log(url);
+    getSubsForURL(url, res)
+    //getSubsForURL("https://www.bbcgoodfood.com/recipes/beef-guinness-stew-bacon-dumplings", res)
 });
 
 let port = process.env.PORT;
