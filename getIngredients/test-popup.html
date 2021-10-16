@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+  	<style>
+ html {
+    margin: 0;
+    padding: 0;
+}
+/*body {
+    font-family: 'Handlee';
+    font-size: 13pt;
+    background-color: #efef;
+    padding: 10px;
+    margin: 0;
+}*/
+h1 {
+    font-size: 20pt;
+    color: #006400;
+    text-align: left;
+    padding: 18px 0 18px 0;
+    margin: 0 0 10px 0;
+}
+.section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+progress {
+    width: 80%;
+    height: 20px;
+    color: #006400;
+    background: #efefef;
+} 
+progress::-webkit-progress-bar {
+    background: #efefef;
+}
+progress::-webkit-progress-value {
+    background: linear-gradient(to right, green, yellow, red);
+} 
+progress::-moz-progress-bar {
+    color: #3fb6b2;
+    background: #efefef;
+}
+.submit {
+    background-color: #3fb6b2;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #43a09d;
+}
+ </style>
+    <title>VeggieSwap</title>
+    <script src="frontend/src/App.js"></script>
+  </head>
+  <body>
+    <h1>VeggieSwap</h1>
+ 
+    	
+    	 <!-- <button id="checkPage">Find Meat Substitutes for this Recipe</button> -->
+         <button onclick="myFunction()">Find Meat Substitutes for this Recipe</button>
+		
+	  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>  
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- Load our React component. -->
+  <script src="test-popup.js"></script>
+  </body>
+</html>

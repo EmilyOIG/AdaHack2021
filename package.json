@@ -4,7 +4,8 @@
   "description": "(scrape)",
   "main": "index.js",
   "scripts": {
-    "test": "\"test\""
+    "test": "\"test\"",
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,10 @@
     "csv-parse": "^4.16.3",
     "d3": "^7.1.1",
     "dataframe-js": "^1.4.4",
+    "express": "^4.17.1",
     "fs": "0.0.1-security",
     "immutable": "^4.0.0",
+    "inspirational-quotes": "^2.0.1",
     "pandas-js": "^0.2.4",
     "request": "^2.88.2",
     "request-promise": "^4.2.6"
