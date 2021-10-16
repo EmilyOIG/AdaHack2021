@@ -1,7 +1,7 @@
 // import DataFrame from 'dataframe.js';
 // import DataFrame, { Row } from 'dataframe.js';
 
-
+var path = require('path');
 var DataFrame = require('dataframe-js').DataFrame;
 // var DataFrame = dfjs.DataFrame;
 
@@ -11,8 +11,10 @@ const df = new DataFrame([
 ], ['A', 'B']);
 
 
-df.show()
+df.show();
 
-console.log(__dirname + "/data/Substitutes.csv")
-const path = __dirname + "\data\Substitutes.csv"
-DataFrame.fromCSV(path).then(df => df.show());
+var x = path.join(__dirname, 'data', 'Substitutes.csv');
+console.log("\\" + x);
+DataFrame.fromCSV(x).then(df => df.show()).catch(function () {
+     console.log("Promise Rejected");
+});

@@ -7,6 +7,14 @@ request("https://www.bbcgoodfood.com/recipes/slow-cooker-beef-stew", (error, res
 
         const datarow= $(".recipe__ingredients");
         const output= datarow.find("li").text();
-        console.log(output);
+        console.log(datarow.text());
+
+        $("list-item").each((i, data) => {
+            const item= $(data).text();
+            const item1= $(data).text();
+            const item2= $(data).text();
+
+            console.log(item, item1, item2);
+        })
     }
 });
