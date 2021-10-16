@@ -1,20 +1,23 @@
-const request= require("request-promise")
-const cheerio= require("cheerio");
+function getIngredientsFromPage(url) {
+    const request= require("request-promise")
+    const cheerio= require("cheerio");
 
-request("https://www.bbcgoodfood.com/recipes/slow-cooker-beef-stew", (error, response, html) => {
-    if (!error && response.statusCode==200) {
-        const $= cheerio.load(html);
+    request(url, (error, response, html) => {
+        if (!error && response.statusCode==200) {
+            const $= cheerio.load(html);
+            const datarow= $(".recipe__ingredients");
 
-        const datarow= $(".recipe__ingredients");
-        const output= datarow.find("li").text();
-        console.log(datarow.text());
+            var liArr = [];
+            datarow.find("li").each( function() {
+                liArr.push($(this).html());
+            });
+            var ingredients = [];
+            for (i=0;i<liArr.length;i++){
+                ingredients.push(liArr[i].split("<!-- -->"));
+            }
+            console.log(ingredients);
+        }
+    });
+}
 
-        $("list-item").each((i, data) => {
-            const item= $(data).text();
-            const item1= $(data).text();
-            const item2= $(data).text();
-
-            console.log(item, item1, item2);
-        })
-    }
-});
+getIngredientsFromPage("https://www.bbcgoodfood.com/recipes/slow-cooker-beef-stew");

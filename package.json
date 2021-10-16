@@ -21,7 +21,13 @@
   "homepage": "https://github.com/EmilyOIG/AdaHack2021#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
+    "csv": "^5.5.3",
+    "csv-parse": "^4.16.3",
+    "d3": "^7.1.1",
     "dataframe-js": "^1.4.4",
+    "fs": "0.0.1-security",
+    "immutable": "^4.0.0",
+    "pandas-js": "^0.2.4",
     "request": "^2.88.2",
     "request-promise": "^4.2.6"
   }

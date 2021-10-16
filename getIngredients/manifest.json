@@ -1,21 +1,19 @@
 {
-
     "name": "VeggieSwap",
     "version": "1.0",
     "description": "This extension will swab meat for vegetarian substitutes",
     "manifest_version": 2,
-  
-    
-    
-    
+    "icons": {
+        "48": "images/icon.png"
+      },
   
     "browser_action": {
+     "browser_style": "true;",
+     "deafult_icon": "images/icon.png",
      "default_popup": "popup.html",
      "default_title": "Hello"
     },
-    "chrome_url_overrides" : {  
-        "newtab": "newtab.html"
-    },
+
     "permissions": [
      "activeTab"
      ]
