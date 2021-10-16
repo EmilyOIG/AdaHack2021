@@ -63,43 +63,21 @@ progress::-moz-progress-bar {
   </head>
   <body>
     <h1>VeggieSwap</h1>
+ 
+    <button onClick="changeColor()">
+        Generate Substitutes
+    </button>
 
-    <button onclick="myFunction()">Click me</button>
-
-    <p id="demo"></p>
-
+    <p>List of substitutes</p>
+    <p id="demo">Hello</p>
+		
     <script>
-        function myFunction() {
-        document.getElementById("demo").innerHTML = "Hello World";
+        const name = document.querySelector(".demo");
+        function changeColor() {
+            name.style.color = "blue";
         }
     </script>
- 
-    <button onclick="myFunction()">Get substitutes</button>
+	<!-- <script src="/frontend/src/Substitute.jsx"></script> -->
 
-    <p id="demo"></p>
-
-    <script>
-        function myFunction() {
-            ;
-        }
-    </script> -->
-    	 <button id="checkPage">Find Meat Substitutes for this Recipe</button>
-     <button onclick="myFunction()">Find Substitutes for this Recipe</button>
-    <p id="demo"></p>
-		 
-	<script>
-        function myFunction() {
-            document.getElementById("demo").innerHTML = "Hello World";
-        }
-		// document.getElementById("checkPage").addEventListener("click", function(){
-		// 	fetch("http://127.0.0.1:3000").then(function(response){
-		// 		return response.text()
-		// 	}).then(function(text){
-		// 		console.log(text)
-		// 	})
-		// }
-
-		// 	)
-	</script>
   </body>
 </html>

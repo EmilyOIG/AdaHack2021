@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/EmilyOIG/AdaHack2021#readme",
   "dependencies": {
+    "axios": "^0.23.0",
     "cheerio": "^1.0.0-rc.10",
     "csv": "^5.5.3",
     "csv-parse": "^4.16.3",
