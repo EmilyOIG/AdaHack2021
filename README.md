@@ -17,6 +17,7 @@ The popup is written in React.js, and the backend is written in Node.js.
 	1.  If using windows ensure the `scripts` section in **frontend/package.json** includes the line `"build":  "set INLINE_RUNTIME_CHUNK=false&&react-scripts build"`
 	2. If using mac ensure the `scripts` section in **frontend/package.json** includes the line `"build":  "INLINE_RUNTIME_CHUNK=false react-scripts build"`
 	3. From **veggieSwap/frontend** run `npm run build` to generate a build folder which contains the extension
+    > You may need to install all of the node and react packages used for this extension - you'll get warning detailing which packages these are when you run the above command
 3. Load the extension into chrome:
 	1. Go to chrome://extensions
 	2. Click "Load Unpack Extensions"
