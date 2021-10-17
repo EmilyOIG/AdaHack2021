@@ -35,3 +35,22 @@ The popup is written in React.js, and the backend is written in Node.js.
 * healthier options (non-vegan)
 * seasonal swaps (environment, local economy)
 * include stats about the nutrients/carbon impact before and after change
+
+
+## Sources 
+
+react web ext:
+https://gilfink.medium.com/building-a-chrome-extension-using-react-c5bfe45aaf36
+https://levelup.gitconnected.com/how-to-use-react-js-to-create-chrome-extension-in-5-minutes-2ddb11899815
+
+node with react:
+https://medium.com/zero-equals-false/how-to-connect-a-react-frontend-with-node-js-bccb1fb7e2bb
+
+query paramaters:
+https://stackabuse.com/get-query-strings-and-parameters-in-express-js/
+
+building issue: https://stackoverflow.com/questions/58354362/inline-script-because-it-violates-the-following-content-security-policy-directiv
+
+tabs:
+https://stackoverflow.com/questions/51411447/using-chrome-api-with-react-js/52554077
+https://stackoverflow.com/questions/6132018/how-can-i-get-the-current-tab-url-for-chrome-extension
