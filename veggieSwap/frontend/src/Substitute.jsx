@@ -3,18 +3,14 @@ import React, {useState} from "react";
 import axios from "axios";
 
 function Substitute() {
-    //const [list, setList] = useState("");
     
     
     function getSubstitute() {
-        //var list = [];
         chrome.tabs.query({
             active: true,
             lastFocusedWindow: true
         }, function(tabs) {
-            // and use that tab to fill in out title and url
             var tab = tabs[0];
-            //console.log(tab.url);
             var requestString = "http://localhost:5000/" + "?RecipleUrl=" + tab.url;
             axios.get(requestString,  { crossdomain: true }).then(response => {
                 fillInSubstitutes(response.data);
@@ -45,7 +41,7 @@ function Substitute() {
     return (
         <div>
             <h1>VeggieSwap</h1>
-            <p>Change meat to veggies</p>
+            <h2>Change meat to veggies</h2>
             <button class="button" onClick={getSubstitute}>
                 Generate Substitutes
             </button>
