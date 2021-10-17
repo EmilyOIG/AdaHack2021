@@ -17,8 +17,6 @@ function Substitute() {
             //console.log(tab.url);
             var requestString = "http://localhost:5000/" + "?RecipleUrl=" + tab.url;
             axios.get(requestString,  { crossdomain: true }).then(response => {
-                //setList(response.data);
-                alert(response.data);
                 fillInSubstitutes(response.data);
             });
         });
