@@ -28,6 +28,7 @@ function Substitute() {
                 veggies.push(element.split(":")[1])
             }
         })
+        tag_id.innerHTML = "";
         var table = "";
         var tag_id = document.getElementById('SubstituteResults');
         table += '<table class="ResultsTable"><tr><th>Meat</th><th>Substitute</th></tr>';
