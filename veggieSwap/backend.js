@@ -41,7 +41,10 @@ function getIngredientsFromPage(url, res, callback) {
                 liArr.push($(this).html());
             });
             for (i=0;i<liArr.length;i++){
-                ingredients.push(liArr[i].split("<!-- -->")[1].split(" "));
+                var ing = liArr[i].split("<!-- -->");
+                if (ing.length >= 2){
+                    ingredients.push(ing[1].split(" "));
+                }
             }
 
             callback(ingredients);
