@@ -54,3 +54,11 @@ building issue: https://stackoverflow.com/questions/58354362/inline-script-becau
 tabs:
 https://stackoverflow.com/questions/51411447/using-chrome-api-with-react-js/52554077
 https://stackoverflow.com/questions/6132018/how-can-i-get-the-current-tab-url-for-chrome-extension
+
+web scraping with node:
+https://www.analyticsvidhya.com/blog/2020/10/web-scraping-using-node-js/
+
+parsing a csv file:
+https://stackoverflow.com/questions/23080413/parsing-a-csv-file-using-nodejs
+
+
