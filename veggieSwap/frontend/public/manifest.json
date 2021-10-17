@@ -4,12 +4,12 @@
   "version": "1.0",
   "description": "This extension will swab meat for vegetarian substitutes",
   "icons": {
-      "48": "images/icon.png"
+      "64": "images/V.png"
     },
 
   "browser_action": {
    "browser_style": true,
-   "deafult_icon": "images/icon.png",
+   "deafult_icon": "images/V.png",
    "default_popup": "index.html",
    "default_title": "Hello"
   },
